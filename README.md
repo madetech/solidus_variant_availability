@@ -1,7 +1,9 @@
 SolidusVariantAvailability
 ==========================
 
-Introduction goes here.
+[![Build Status](https://travis-ci.org/madetech/solidus_variant_availability.svg?branch=master)](https://travis-ci.org/madetech/solidus_variant_availability)
+
+Add variant based availability to `Spree::Variant`
 
 Installation
 ------------
