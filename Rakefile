@@ -11,18 +11,17 @@ begin
   RSpec::Core::RakeTask.new(:spec)
 
   RuboCop::RakeTask.new
+
+  task default: %i(first_run rubocop spec)
 rescue LoadError
   # no rspec available
 end
 
-task :default do
+task :first_run do
   if Dir['spec/dummy'].empty?
     Rake::Task[:test_app].invoke
     Dir.chdir('../../')
   end
-
-  Rake::Task[:rubocop].invoke
-  Rake::Task[:spec].invoke
 end
 
 desc 'Generates a dummy app for testing'
