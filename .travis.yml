@@ -2,8 +2,6 @@ sudo: false
 cache: bundler
 language: ruby
 bundler_args: --quiet
-before_script:
-  - bundle exec rake test_app
 script:
   - bundle exec rake
 rvm:
