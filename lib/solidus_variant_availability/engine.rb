@@ -24,7 +24,6 @@ module SolidusVariantAvailability
       Spree::Api::BaseController.include(SolidusVariantAvailability::ApiBaseControllerMethods)
       Spree::Api::ReturnAuthorizationsController.include(SolidusVariantAvailability::VariantNotPurchasableRescue)
       Spree::Api::CheckoutsController.include(SolidusVariantAvailability::VariantNotPurchasableRescue)
-
     end
 
     config.to_prepare(&method(:activate).to_proc)
