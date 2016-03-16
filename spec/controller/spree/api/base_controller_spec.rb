@@ -8,7 +8,7 @@ describe Spree::Api::BaseController, type: :controller, tag: :api do
     rescue_from Spree::Variant::NotPurchasable, with: :variant_not_purchasable_error
 
     def index
-      render :text => { "products" => [] }.to_json
+      render text: { 'products' => [] }.to_json
     end
   end
 

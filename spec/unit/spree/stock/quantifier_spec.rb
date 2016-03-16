@@ -1,6 +1,6 @@
 describe Spree::Stock::Quantifier, type: :model do
   let(:target_stock_location) { nil }
-  let!(:stock_location) { create :stock_location_with_items  }
+  let!(:stock_location) { create :stock_location_with_items }
   let!(:stock_item) { stock_location.stock_items.order(:id).first }
 
   before do

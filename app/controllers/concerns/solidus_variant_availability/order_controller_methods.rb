@@ -4,7 +4,7 @@ module SolidusVariantAvailability
 
     private
 
-    def variant_not_purchasable_error(exception)
+    def variant_not_purchasable_error(_exception)
       flash[:error] = Spree.t(:variant_not_purchasable_error)
       redirect_back_or_default(spree.root_path)
     end

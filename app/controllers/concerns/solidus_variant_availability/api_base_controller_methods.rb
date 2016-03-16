@@ -10,7 +10,7 @@ module SolidusVariantAvailability
       render(
         json: {
           errors: [I18n.t(:variant_not_purchasable_error, scope: 'spree')],
-          type: 'not_purchasable',
+          type: 'not_purchasable'
         },
         status: 422
       )
