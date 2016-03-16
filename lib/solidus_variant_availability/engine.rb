@@ -15,6 +15,16 @@ module SolidusVariantAvailability
       end
 
       Spree::Variant.prepend(SolidusVariantAvailability::VariantMethods)
+      Spree::OrderContents.prepend(SolidusVariantAvailability::OrderContentMethods)
+      Spree::Stock::Quantifier.prepend(SolidusVariantAvailability::StockQuantifierMethods)
+
+      Spree::OrdersController.include(SolidusVariantAvailability::VariantNotPurchasableRescue)
+      Spree::OrdersController.include(SolidusVariantAvailability::OrderControllerMethods)
+
+      Spree::Api::BaseController.include(SolidusVariantAvailability::ApiBaseControllerMethods)
+      Spree::Api::ReturnAuthorizationsController.include(SolidusVariantAvailability::VariantNotPurchasableRescue)
+      Spree::Api::CheckoutsController.include(SolidusVariantAvailability::VariantNotPurchasableRescue)
+
     end
 
     config.to_prepare(&method(:activate).to_proc)

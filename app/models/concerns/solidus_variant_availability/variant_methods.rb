@@ -2,6 +2,8 @@ module SolidusVariantAvailability
   module VariantMethods
     extend ActiveSupport::Concern
 
+    class ::Spree::Variant::NotPurchasable < StandardError; end
+
     def self.in_stock(stock_locations = nil)
       super.where(purchasable: true)
     end
