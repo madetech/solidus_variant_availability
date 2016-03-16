@@ -4,12 +4,20 @@ module SolidusVariantAvailability
 
     class ::Spree::Variant::NotPurchasable < StandardError; end
 
-    def self.in_stock(stock_locations = nil)
-      super.where(purchasable: true)
+    module ClassMethods
+      def in_stock(stock_locations = nil)
+        super.where(purchasable: true)
+      end
+
+      def active(currency = nil)
+        super.where(purchasable: true)
+      end
     end
 
-    def self.active(currency = nil)
-      super.where(purchasable: true)
+    def self.prepended(base)
+      class << base
+        prepend ClassMethods
+      end
     end
 
     def in_stock?
