@@ -5,8 +5,8 @@ require 'solidus_variant_availability/version'
 Gem::Specification.new do |s|
   s.name        = 'solidus_variant_availability'
   s.version     = SolidusVariantAvailability::VERSION
-  s.summary     = 'TODO'
-  s.description = 'TODO'
+  s.summary     = 'Adds the ability to toggle purchasablility (real word?) of Spree::Variant'
+  s.description = s.summary
   s.license     = 'BSD-3-Clause'
 
   s.author    = 'Seb Ashton'
