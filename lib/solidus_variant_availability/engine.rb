@@ -14,6 +14,10 @@ module SolidusVariantAvailability
         Rails.configuration.cache_classes ? require(c) : load(c)
       end
 
+      Dir.glob(File.join(File.dirname(__FILE__), '../../app/overrides/*.rb')) do |c|
+        Rails.configuration.cache_classes ? require(c) : load(c)
+      end
+
       Spree::Variant.prepend(SolidusVariantAvailability::VariantMethods)
       Spree::OrderContents.prepend(SolidusVariantAvailability::OrderContentMethods)
       Spree::Stock::Quantifier.prepend(SolidusVariantAvailability::StockQuantifierMethods)
