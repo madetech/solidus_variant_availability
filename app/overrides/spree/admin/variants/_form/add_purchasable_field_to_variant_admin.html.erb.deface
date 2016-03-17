@@ -1,0 +1,7 @@
+<!-- insert_bottom '[data-hook="variants"]' -->
+<div class="field" data-hook="purchasable">
+  <label>
+    <%= f.check_box :purchasable %>
+    <%= Spree.t(:purchasable) %>
+  </label>
+</div>

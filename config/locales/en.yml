@@ -3,4 +3,5 @@
 
 en:
   spree:
+    purchasable: Purchasable
     variant_not_purchasable_error: Variant is not purchasable at this time
