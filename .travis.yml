@@ -3,12 +3,14 @@ cache: bundler
 language: ruby
 bundler_args: --quiet
 script:
-  - bundle exec rake
+- bundle exec rake
 rvm:
-  - 2.2.2
+- 2.2.2
 notifications:
   email:
-    - seb@madetech.co.uk
+  - seb@madetech.co.uk
+  slack:
+    secure: fjhJHbxAkbwzGp8XVjamWO/YNKUZZhOCGkF4cr+1up/XArGTGvztxNH+XMeCYoYY+4KLUd1MuocBiia7VTGkJcwjGy02IPxdzxK2nHBuRDZQkq/fuJHKlZd+dD2Po2TL5q3bvwJ8psThXBsnKJotwuVXsS2LfRyPZwY6Pxrl3kjm8ApedJH+1+Zqk8ykCVeES+9baKd+rAAZuo9HonmH/UFB5R8F1QfXJ5UWCLiV1N6hbtSyMOt1kmmxJ8hQMbuXnO9/XMnJgEWXCb6tP8I3SVzwysxl4OgH/bbhYyikca1sYISbB4x49Pbo7nNes0is2ig8Vhjx7/QM4gtMfdhgZgy5pqcoeP6DaH4gVOjOwnJ63IADdwWHgS1abrPob+noohZ2SHOQDS4gmM9eAzi6PjTOSI0dsc+PEJ1gbXowrxsnAHxTFLWWOgb9AnB7lt/j0xOJnXIdH5ehbZm9x7wtgrvQe94ijhJQgyOyQJDw86IVWgKvSiV8Hnypz6Gg0sDnE1+hergXH8kQp6FW36ye/72DK3ja+q15atHkkZL9p9WpPkn7r5kZRo9q/ktSzVnugi3vQGuXXLvSxnOFSV6UnOTuUek1VudYXL05q24+kTJ8PHbXLrmvy2sxQ6I0e5uBUZlZZxDYq7vvO5e+BVk7WRKZRqAzFtKsXoN2/ZWyUlQ=
 branches:
   only:
-    - master
+  - master
